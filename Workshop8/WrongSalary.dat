@@ -1,0 +1,77 @@
+506745728 35715.23
+505968818 33525.96
+174784181 95875.12
+524544921 154782.54
+
+
+
+		//TODO: Overload the += operator with a raw pointer
+		// as a second operand.
+		void operator+=(T& obj)
+		{
+			list.push_back(obj);
+		}
+
+
+		// TODO: Add your code here to build a list of employees
+		//         using raw pointers
+
+		EmployeeWage* temp = nullptr;
+		for (size_t i = 0; i < emp.size(); i++)
+		{
+			for (size_t j = 0; j < sal.size(); j++)
+			{
+				if (emp[i].id == sal[j].id)
+				{
+					if (activeEmp.checkSin(emp[i].id))
+					{
+						temp = new EmployeeWage(emp[i].name, sal[j].salary);
+						try
+						{
+							temp->rangeValidator();
+						}
+						catch (...)
+						{
+							delete temp;
+							throw std::string("*** Employees salaray range is not valid");
+						}
+
+						activeEmp += *temp;
+						
+						delete temp;
+					}
+				}
+			}
+		}
+
+		//TODO: add a function here to check correct salary range
+		void rangeValidator()
+		{
+			if (this->m_salary > 99999 || this->m_salary < 0)
+				throw std::string("*** Employees salaray range is not valid");
+		}
+
+		//TODO: Implement the Luhn Algorithm to check the 
+		//      valadity of SIN No's
+		bool checkSin(const std::string& sin)
+		{
+			int sum = 0;
+			bool secondDigit = false;
+
+			for (size_t i = 0; i < sin.length(); i++)
+			{
+				int num = sin[i] - '0';
+
+				if (secondDigit)
+				{
+					num = num * 2;
+					if (num >= 10)
+						num -= 9;
+				}
+
+				sum += num;
+				secondDigit = !secondDigit;
+			}
+
+			return(sum % 10 == 0);
+		}

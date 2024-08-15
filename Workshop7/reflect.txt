@@ -1,0 +1,30 @@
+Glenn Parreno
+geparreno@myseneca.ca
+115814196
+10 / 11 / 22
+*Resubmit because I forgot to replace some loops
+*Replaced another algorithim
+
+	This workshop I found to be quite easy. The interesting things I did in this workshop is using string stream again. I used it in the previous workshop and did it again in this one. In the CrimeStatistics constructor I did 'stringstream ss(line)' so I can just use the insertion operator like this 'ss >> prov >> dist >> crime >> yr >> numC >> numR' to get the data. Its not that important I just find it to be good practice. I did have some difficulty in sorting STL containers but looking through example in the internet I resolved my problem. The problem is I am using a list as a container and trying to sort it using std::sort. I read in the interner that std::sort only works for random aceess and list is not a random access container.
+
+	std::accumulate
+		I used this one to calculate the total number of cases and total number of cases resolved
+
+	std::count_if
+		I used this one to count how many of a certain parameter is in the collection. For example in the getListForProvince function I used this one to count how many are in the vector and use to initialize an empty list.
+
+	std::copy_if
+		I used this one in the getListForProvince() function. The purpose of this is that it copies the Crime from one collection to another if both of them have "Ontario" as their province.
+
+	std::sort
+		I used this one to sort the collection according to what ever parameter specified by the client.
+
+	std::for_each
+		I used this one to itearate over the collection in order to print them on the screen. I also used this to replace each instances of "[None]" with  " ".
+		
+	std::any_of
+		This one is to find is there is any instances of of fraund in the function.
+
+	The advantages of using algorithims rather than loop is that you can get the same functionality, but when using algorithims you can do it in one lines rather than multiple lines of code. Using loops can be complicated and it is good to condense stuff in one line. 
+
+	I would add an if statement that would throw the string that is misspelled or does not match anything. Then I would do something in the client to catch it.

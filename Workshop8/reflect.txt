@@ -1,0 +1,11 @@
+Glenn Parreno
+geparreno@myseneca.ca
+115814196
+20 / 11 / 22
+
+
+	I found the first part of this workshop straightforward and quite easy to do. We have been working with pointers for some time now so its not that cofusing to implement them. Implementing smart pointers are somewhat difficult though. I had some trouble figuring out how do I do them I have read the coursenotes and saw some stuff on the internet and found that implementing a std::unique_ptr like in line 65 of the writeSmart function in writing record cpp. I thought since we are only using it for one thing making new EmployeeWages its best to use that since it costs less work. I also had trouble in smart operator+= overload. Using smart pointers are new to me so I had toruble knowing how to send and recieve them as function parameters. There many example of this in the internet that eventually helped me out with this.
+
+	For me, the only advantage of usign smart pointers compared to raw pointers is the fact that smart pointers manage themselves. It gives the programmer less work and it is evident in this workshop. In my WritingRecord.cpp, the functions writeRaw and writeSmart are nearly identical but the writeSmart functions is more concise. Smart pointers alleviate the trouble of deleting or possibly forgetting to delete memory like in raw pointers. I also dont have to the trouble of using try catch statements just like in my writeRaw function. In that function somethime when the salary get validated it throws an exception. So I need to make a logic that would catch the exeption and delete the pointer, but I also have a delete statement at the end to delete pointers that passed validation so that is two different delete statements. In smart pointers I dont need to bother with that since they get deleted automatically when they go out of scope.
+	
+	
