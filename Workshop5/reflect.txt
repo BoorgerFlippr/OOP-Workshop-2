@@ -1,9 +1,0 @@
-/*
-* Glenn Parreno
-* geparreno@myseneca.ca
-* 115814196
-* 17 / 10 / 22
-* I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments
-*/
-
-	This workshop is long and can be quite tricky to implement. Lambdas, functors and function pointers can be easily jumbled together, thus making some methods in this workshop confusing to make. However through completing the workshop, it provides a good example on how they are different. The difference between a functor and a lambda is that a functor is mostly used as a method of an object. It is logic that is encapsulated within an object that mostly works with the object's attribute. Meanwhile a lambda is an anonymus function. I can see it mostly being used for when you need to use logic that is in its own block. Something that is quick and simple. If I were to implement the SpellChecker moudle without exceptions. I would remove throw statements and just print out what is wrong. For exaple in my SpellChecker.cpp in line 24, instead of writing 'throw "Bad file Name!" '. I would just do ' cout << "bad file name!" '. Since the Movie and Book module are very similar to each other I could maybe use polymorphism to solve that issue. I would make an interface (abstract base class) and have book and movie derive from that. For this workshop I dont think it is necessary to include a default constructor for Movie and Book module. However it is always a good idea to create a default constructor.
